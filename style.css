@@ -1,0 +1,398 @@
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #efefef;
+  --primary: #3c35d8;
+  --primary-dark: #2f2ab5;
+  --yellow: #ece84f;
+  --text: #3535c9;
+  --white: #ffffff;
+  --gray: #d9d9d9;
+
+  --radius: 10px;
+}
+
+body {
+  background: var(--bg);
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  background: linear-gradient(to right, #342fd3, #473cff);
+  height: 90px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 40px;
+}
+
+.logo {
+  color: var(--yellow);
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-btn {
+  border: 2px solid var(--yellow);
+  background: transparent;
+  color: var(--yellow);
+
+  padding: 8px 16px;
+  border-radius: 6px;
+
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.profile {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #ccc;
+}
+
+/* =========================
+   LANDING PAGE
+========================= */
+
+.hero {
+  height: 100vh;
+
+  background:
+    linear-gradient(rgba(55, 45, 255, 0.7), rgba(55, 45, 255, 0.7)),
+    url("https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?q=80&w=1200");
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+
+  padding-left: 80px;
+}
+
+.hero-content h1 {
+  color: var(--yellow);
+  font-size: 5rem;
+}
+
+.hero-content p {
+  color: white;
+  font-size: 1.4rem;
+  margin: 20px 0 40px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.hero-buttons a {
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.primary-btn {
+  background: var(--yellow);
+  color: var(--primary);
+}
+
+.secondary-btn {
+  border: 2px solid var(--yellow);
+  color: var(--yellow);
+}
+
+/* =========================
+   AUTH PAGES
+========================= */
+
+.auth-container {
+  display: flex;
+  min-height: calc(100vh - 90px);
+}
+
+.auth-left,
+.auth-right {
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-right {
+  background: #ececf9;
+}
+
+.auth-card {
+  width: 350px;
+}
+
+.auth-card h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+}
+
+.auth-card input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 18px;
+
+  border: none;
+  background: white;
+}
+
+.auth-card button {
+  width: 100%;
+
+  padding: 14px;
+
+  border: none;
+  background: var(--yellow);
+
+  color: var(--primary);
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.placeholder-img {
+  width: 250px;
+  height: 180px;
+  background: #d5d5d5;
+  border-radius: 12px;
+}
+
+/* =========================
+   HOME PAGE
+========================= */
+
+.page-content {
+  padding: 60px;
+}
+
+.page-title {
+  font-size: 3rem;
+  margin-bottom: 60px;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 40px;
+}
+
+.movie {
+  text-decoration: none;
+  color: inherit;
+}
+
+.poster {
+  width: 170px;
+  height: 240px;
+  background: #cfcfcf;
+  margin-bottom: 10px;
+}
+
+/* =========================
+   GALLERY
+========================= */
+
+.review-history {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.review-card .poster {
+  width: 160px;
+  height: 220px;
+}
+
+.stars {
+  color: #4444ff;
+  margin: 10px 0;
+}
+
+/* =========================
+   ACCOUNT
+========================= */
+
+.account-layout {
+  display: flex;
+  gap: 60px;
+}
+
+.sidebar {
+  width: 250px;
+}
+
+.account-pic {
+  width: 160px;
+  height: 160px;
+  background: #d0d0d0;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.sidebar a {
+  display: block;
+
+  background: white;
+  padding: 12px;
+  margin-bottom: 12px;
+
+  text-decoration: none;
+  color: var(--text);
+}
+
+.account-main {
+  flex: 1;
+  background: #ececf9;
+  min-height: 500px;
+}
+
+/* =========================
+   REVIEW PAGE
+========================= */
+
+.review-layout {
+  display: flex;
+  gap: 60px;
+}
+
+.review-movie {
+  width: 400px;
+}
+
+.big-poster {
+  width: 100%;
+  height: 300px;
+  background: #111133;
+}
+
+.review-side {
+  flex: 1;
+}
+
+.review-side textarea {
+  width: 100%;
+  height: 140px;
+
+  margin-top: 20px;
+  padding: 15px;
+
+  border: none;
+  background: #ececf9;
+}
+
+.review-actions {
+  margin-top: 30px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.review-actions a,
+.review-actions button {
+  text-decoration: none;
+
+  padding: 14px 24px;
+
+  border: none;
+  border-radius: 8px;
+
+  cursor: pointer;
+}
+
+.leave-btn {
+  background: #5b55e6;
+  color: white;
+}
+
+.submit-btn {
+  background: var(--yellow);
+  color: var(--primary);
+}
+
+/* =========================
+   CONFIRMATION
+========================= */
+
+.confirm-layout {
+  display: flex;
+  gap: 60px;
+}
+
+.friend-review {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.friend-pic {
+  width: 50px;
+  height: 50px;
+  background: #ccc;
+  border-radius: 50%;
+}
+
+.invite-btn {
+  display: inline-block;
+
+  margin-top: 10px;
+  padding: 10px 18px;
+
+  background: var(--yellow);
+  color: var(--primary);
+
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+  .movie-grid,
+  .review-history {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .review-layout,
+  .confirm-layout,
+  .account-layout,
+  .auth-container {
+    flex-direction: column;
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+}
